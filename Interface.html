@@ -2,15 +2,24 @@
 <html>
     <head>
         <title>Live html editor</title>
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="editor.js"></script>
         <link rel="stylesheet" href="Style.css" type="text/css"/>
     </head>
     <body>
-        <div id="htmlHolder"></div>
+        <h1>Interactive html editor</h1>
         <br/>
+        
+        <div id="wholeHolder">
+            <h2>&darr; Resultant page &darr;</h2>
+            <div id="htmlHolder"></div>
+        </div>
+        <br/>
+        
         <div id="entryDiv">
-            <textarea rows="12" placeholder="Enter your HTML here" oninput="runHtml()" autofocus></textarea>
-            <textarea rows="12" placeholder="Enter your css here" oninput="runCss()"></textarea>
-            <textarea rows="12" placeholder="Enter your javascript here" oninput="ruJavascript()"></textarea>
+            <textarea id="htmlText" rows="12" placeholder="Enter HTML here." oninput="runHtml()" autofocus></textarea>
+            <textarea id="jsText" rows="12" placeholder="Enter javascript here." oninput="runJavascript()"></textarea>
+            <textarea id="cssText" rows="12" placeholder="Enter css here." oninput="runCss()"></textarea>
         </div>
     </body>
 </html>

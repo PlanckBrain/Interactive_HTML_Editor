@@ -1,5 +1,11 @@
 body {
     margin: 15px 8px 10px 15px;
+    background-color: #E6DD93;
+}
+
+h1 ,h2 {
+    margin: auto;
+    text-align: center;
 }
 
 textarea {
@@ -9,8 +15,10 @@ textarea {
     width: 95%;
 }
 
+
 #htmlHolder {
     margin: 10px 0px 10px 0px;
+    background-color: white;
 }
 
 #entryDiv {
