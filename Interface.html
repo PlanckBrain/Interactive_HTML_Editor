@@ -5,8 +5,12 @@
         <link rel="stylesheet" href="Style.css" type="text/css"/>
     </head>
     <body>
-        <textarea placeholder="Enter your HTML here" oninput="Html()"></textarea>
-        <textarea placeholder="Enter your css here" oninput="Css()"></textarea>
-        <textarea placeholder="Enter your javascript here" oninput="Javascript()"></textarea>
+        <div id="htmlHolder"></div>
+        <br/>
+        <div id="entryDiv">
+            <textarea rows="12" placeholder="Enter your HTML here" oninput="runHtml()" autofocus></textarea>
+            <textarea rows="12" placeholder="Enter your css here" oninput="runCss()"></textarea>
+            <textarea rows="12" placeholder="Enter your javascript here" oninput="ruJavascript()"></textarea>
+        </div>
     </body>
 </html>

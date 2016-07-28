@@ -1,7 +1,18 @@
 body {
-    
+    margin: 15px 8px 10px 15px;
 }
 
 textarea {
     font-family: monospace, Serif;
+    display: block;
+    margin-bottom: 15px;
+    width: 95%;
+}
+
+#htmlHolder {
+    margin: 10px 0px 10px 0px;
+}
+
+#entryDiv {
+    margin: 10px 0px 10px 0px;
 }
