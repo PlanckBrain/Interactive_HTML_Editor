@@ -16,8 +16,8 @@ $(document).ready(function() {
     		iframeBody = $('body',doc);
     		iframeHead = $('head',doc);
     		iframeScript = $('<script type="text/javascript"></script>');
-    		iframeCss= $('<link rel="stylesheet" type="text/css" />');
-    		iframeHead.html(iframeScript[0] + iframeCss[0]);
+    		iframeCss= $('<link rel="stylesheet" type="text/css">');
+    		iframeHead.html(iframeScript + iframeCss);
     	}, 1);
     });
 });
@@ -29,10 +29,10 @@ function runHtml()
 
 function runJavascript()
 {
-    iframeScript.html($("#jsText").val());
+    iframeScript[0].html($("#jsText").val());
 }
 
 function runCss()
 {
-    iframeCss.html($("#cssText").val());
+    iframeCss[0].html($("#cssText").val());
 }
