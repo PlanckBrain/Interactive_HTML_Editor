@@ -5,19 +5,20 @@ var iframeBody;
 var iframeHead;
 var iframeScript;
 var iframeCss;
+var $frame;
 
 
 $(document).ready(function() { 
     $(function() {
-    	var $frame = $('<iframe style="width:99%; height:100%;" >');
-    	$("#htmlHolder").html( $frame );
+    	$frame = $("#iFrame");
     	setTimeout( function() {
-    		var doc = $frame[0].contentWindow.document;
+    		var doc = $frame[0].contentWindow.document; //Learn about this more
     		iframeBody = $('body',doc);
     		iframeHead = $('head',doc);
     		iframeScript = $('<script type="text/javascript"></script>');
-    		iframeCss= $('<link rel="stylesheet" type="text/css">');
-    		iframeHead.html(iframeScript + iframeCss);
+    		iframeHead.append(iframeScript);
+    		iframeCss= $('<style id="jsbin-css"></style>');
+    		iframeHead.append(iframeCss);
     	}, 1);
     });
 });
@@ -29,10 +30,12 @@ function runHtml()
 
 function runJavascript()
 {
-    iframeScript[0].html($("#jsText").val());
+    iframeScript[0].innerHTML = ($("#jsText").val());
+    //document.getElementById("iFrame").contentWindow.location.reload(); //WHY DOESN'T THIS WORK??!?!?!?!?!?!?!?!?
+    $frame.src = $frame.src;
 }
 
 function runCss()
 {
-    iframeCss[0].html($("#cssText").val());
+    iframeCss[0].innerHTML = ($("#cssText").val());
 }
